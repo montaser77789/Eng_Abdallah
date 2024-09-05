@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    text-align: var(--bs-body-text-align);
+}
+
+.redirect-bar {
+    background: #c1c1c1;
+    padding: 1.6rem;
+    position: relative;
+    text-align: center;
+    z-index: 10000;
+}
+.redirect-bar p span {
+    background: #b2b2b2;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 10px;
+}
+.redirect-bar p {
+    color: #575757;
+    font-family: IBM;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+[dir=rtl] .redirect-bar p span {
+    padding: .5rem 5px .1rem 10px;
+}
+.css-vubbuv {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* /////////////////////////////header//////////////////// */
+.navbar {
+    height: 6rem;
+  }
+  
+  .collapse {
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin-left: auto !important; /* للتأكد أن القائمة تكون في المنتصف */
+  }
+  
+  .d-flex {
+    margin-left: auto !important; /* لجعل "تسجيل الدخول" في أقصى اليسار */
+  }
+  
+  .navbar-brand {
+    margin-right: auto !important; /* لجعل الشعار في أقصى اليمين */
+  }
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: black; /* يمكنك تخصيص اللون */
+    padding: 20px 0;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #0088af;
+    bottom: -5px; 
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link.active::after {
+    width: 100%; /* عرض الخط الكامل عند النقر */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* يمكنك تخصيص النمط عند النقر */
+  }
+.login {
+    width: 10rem;
+    cursor: pointer;
+    color: #0088af;
+    
+}   
+/* الخلفية البيضاء في وضع الموبايل عند فتح القائمة */
+/* الخلفية البيضاء في وضع الموبايل */
+@media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: white;
+      position: absolute; 
+      top: 6rem;
+      left: 0;
+      width: 100%; 
+      z-index: 1000; 
+      padding: 1rem; 
+    }
+    .navbar-nav{
+        text-align: right;
+
+
+    }
+    /* تعديل الروابط في القائمة */
+    .navbar-nav .nav-link {
+      color: black;
+      margin: 0.5rem 0; /* بعض المساحة بين الروابط */
+    }
+  
+    .navbar .login a {
+      color: black;
+    }
+  }
+  
+
+
+
+/* /////////////footer/////////////////////// */
+.footer {
+    background: #003646;
+    padding-top: 95px;
+}
+.footer .footer-top .footer-link-cont .footer-links h4 {
+    color: #cce7ef;
+    font-family: IBM;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.footer .footer-top .footer-link-cont .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer .footer-top .footer-link-cont .footer-links ul li {
+    margin-bottom: 1.4rem;
+}
+.footer .footer-top .footer-link-cont .footer-links ul li a {
+    color: #f7fafd !important;
+    cursor: pointer !important;
+    font-family: IBM !important;
+    font-size: 1.4rem !important;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    margin: 0px !important;
+}
+.footer .footer-top .footer-link-cont .footer-links ul li a:hover {
+    color: #0088af !important;
+}
+.footer .footer-top .partners {
+    display: flex;
+}
+[dir=rtl] .footer .footer-top .partners .partner-block {
+    margin-left: 30px;
+}
+.footer .footer-top .partners .partner-block h5 {
+    color: #f7fafd;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.footer .footer-top .partners .partner-block .partner-img.supervising {
+    background: url(../images/e8567d776b5b796b80eb.png) no-repeat;
+    background-size: cover;
+}
+.footer .footer-top .partners .partner-block .partner-img {
+    height: 5.5rem;
+    position: relative;
+    width: 7rem;
+}
+[dir=rtl] .footer .footer-top .partners .partner-block {
+    margin-left: 30px;
+}
+.footer .footer-top .partners .partner-block h5 {
+    color: #f7fafd;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+[dir=ltr] .text-end, [dir=rtl] .text-start {
+    text-align: right !important;
+}
+.footer .footer-top .partners .partner-block .partner-img.theqa {
+    background: url(../fc4a734….svg) no-repeat;
+    background-size: cover;
+}
+.footer .footer-top .partners .partner-block .partner-img {
+    height: 5.5rem;
+    position: relative;
+    width: 7rem;
+}
+.footer .footer-top .partners .partner-block .partner-img .partner-link {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.footer .footer-top .partners .partner-block .partner-img.rooya {
+    align-self: flex-end;
+    background: url(../1185860….svg) no-repeat;
+    background-size: 100% 100%;
+}
+.footer .footer-top .partners .partner-block .partner-img {
+    height: 5.5rem;
+    position: relative;
+    width: 7rem;
+}
+.footer .footer-bottom {
+    border-top: 1px solid #1a5262;
+    color: #f7fafd;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    margin-top: 9rem;
+    padding: 26px 0;
+}
+.footer .footer-top h4 {
+    color: #cce7ef;
+    font-family: IBM;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.footer .footer-top .footer-google-store {
+    margin-left: 2rem;
+    padding-right: 10px;
+}
+[dir=rtl] .footer .footer-top .footer-app-store {
+    margin-left: 2rem;
+    padding-right: 38px;
+}
+.footer .footer-top .footer-app-store {
+    background: url(../images/22df01a4321c2797353b.svg) no-repeat;
+    background-size: 100% 100%;
+    color: #333;
+    font-family: IBM;
+    font-size: 9px;
+    font-weight: 700;
+    height: 40px;
+    padding-top: 5px;
+    text-align: start;
+    text-decoration: none;
+    width: 120px;
+}
+.footer .footer-top .footer-google-store {
+    background: url(../images/e8567d776b5b796b80eb.png) no-repeat;
+    background-size: 100% 100%;
+    color: #333;
+    font-family: IBM;
+    font-size: 9px;
+    font-weight: 700;
+    height: 40px;
+    padding-top: 5px;
+    text-align: start;
+    text-decoration: none;
+    width: 120px;
+}
+.footer .footer-top .footer-social {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.footer .footer-top .footer-social li a i{
+    color: #0088af;
+    font-size: 28px;
+    
+}
+[dir=rtl] .footer .footer-top .footer-social li {
+    margin-left: 1rem;
+}
+
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer .footer-top .footer-link-cont {
+        display: flex;
+        justify-content: center;
+    }
+     .footer .footer-top .footer-link-cont .footer-links {
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .redirect-bar p {
+        font-size: 14px;
+    }
+    .redirect-bar p span {
+        font-size: 14px ;
+        font-weight: 600;
+    }
+    .footer .footer-top h4 {
+        font-size: 1.2rem;
+    }
+    .footer .footer-top .footer-link-cont .footer-links ul li a {
+        font-size: 14px;
+    }
+    .footer .footer-top .footer-social{
+        margin: auto;
+        justify-content: center;
+    }
+    .footer .footer-top .footer-social li {
+        margin-left: 1rem;
+    }
+    .footer .footer-top .footer-social li a i{
+        font-size: 22px;
+    }
+    
+}
+
