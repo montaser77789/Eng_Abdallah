@@ -236,6 +236,97 @@ body {
     background-color: #0056b3; /* تغيير لون الخلفية عند التمرير */
     border-color: #004494; /* تغيير لون الحدود عند التمرير */
   }
+
+
+  /* ///////////////////////////////information/////////////////////////////////////// */
+  .info-component.info-checktime {
+    padding-top: 23rem;
+}
+.info-component {
+    padding: 11rem 0;
+}
+.info-component .info-title {
+    color: #003646;
+    font-family: IBM;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 5.5rem;
+    text-align: center;
+}
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.info-component .info-container .info-content {
+    margin-bottom: 4rem;
+    text-align: center;
+    width: 20rem;
+}
+.info-component .info-container .info-content .inf-img.annual {
+    background: url(../images/dcd1074a22e0523058bf.svg) no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 3.89px 7.78px rgba(77, 151, 68, .3098039216));
+    height: 8rem;
+    width: 8rem;
+    margin: auto;
+}
+.info-component .info-container .info-content .inf-img.trading {
+    background: url(../images/8d86739dc3808dc4ddc4.svg) no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 3.92px 7.84px rgba(246, 194, 60, .3098039216));
+    height: 8rem;
+    width: 8rem;
+    margin: auto;
+}
+.info-component .info-container .info-content .inf-img.global {
+    background: url(../images/fd3beaa4a767112464c5.svg) no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0 3.9px 7.79px rgba(0, 136, 175, .3098039216));
+    height: 8rem;
+    width: 8rem;
+    margin: auto;
+}
+.inf-details{
+    margin: 10px 0;
+}
+.inf-details h4{
+    color: black;
+    margin: 20px 0;
+}
+.inf-details p{
+    color: black;
+    font-size: 14px;
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .info-component {
+        padding: 4.4rem 0;
+    }
+    .info-component.info-checktime {
+        padding-top: 4.2rem;
+    }
+    .info-component .info-title {
+        font-size: 3.33rem;
+        margin-bottom: 3.5rem;
+    }
+    .info-component .info-container .info-content .inf-img {
+        margin-bottom: 1.5rem;
+    }
+    .info-component .info-container .info-content .inf-img.annual {
+        height: 6rem;
+        width: 6rem;
+    }
+    .info-component .info-container .info-content .inf-img.trading {
+        height: 6rem;
+        width: 6rem;
+    }
+    .info-component .info-container .info-content .inf-img.global {
+        height: 6rem;
+        width: 6rem;
+    }
+}
+
   
   
 

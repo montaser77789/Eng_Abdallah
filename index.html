@@ -60,55 +60,87 @@
   <!-- //////////////////////////main Section///////////////////////////////// -->
   <section class="section text-center">
     <div class="container">
-        <div class="hero-content row">
-            <div class="col-lg-6 col-md-12 mb-4">
-              <h4 class="----info-title">أحد منتجات مركز سلامة المركبات</h4>
-                <h1>المنصة الموحدة لمواعيد الفحص الفني الدوري للمركبات</h1>
-                <p>تتيح المنصة حجز مواعيد الفحص الفني الدوري للمركبات لدى جميع الجهات المرخصة من المواصفات السعودية لتقديم الخدمة</p>
-                <div class="d-flex justify-content-center justify-content-lg-start ">
+      <div class="hero-content row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h4 class="----info-title">أحد منتجات مركز سلامة المركبات</h4>
+          <h1>المنصة الموحدة لمواعيد الفحص الفني الدوري للمركبات</h1>
+          <p>تتيح المنصة حجز مواعيد الفحص الفني الدوري للمركبات لدى جميع الجهات المرخصة من المواصفات السعودية لتقديم
+            الخدمة</p>
+          <div class="d-flex justify-content-center justify-content-lg-start ">
 
-                  <button class="btn-main-section-one">تسجيل حساب جديد</button>
-                  <button class=" btn-main-section ">حجز موعد</button>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <img src="./images/bg.png" alt="Inspection Image" class="img-fluid">
-            </div>
+            <button class="btn-main-section-one">تسجيل حساب جديد</button>
+            <button class=" btn-main-section ">حجز موعد</button>
+          </div>
         </div>
+        <div class="col-lg-6 col-md-12">
+          <img src="./images/bg.png" alt="Inspection Image" class="img-fluid">
+        </div>
+      </div>
 
-        <div class="form-section">
-            <h3 class="text-center mb-4">البحث عن الحجوزات للفحص الفني الدوري</h3>
-            <form id="booking-form" class="row">
-              <div class="col-md-4 position-relative">
-                <select class="form-control" id="location">
-                  <option value="" disabled selected>المنطقة</option>
-                  <option value="region1">الرياض</option>
-                  <option value="region2">جدة</option>
-                  <option value="region3">مكة</option>
-                </select>
-                <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
-              </div>
-              <div class="col-md-4 position-relative">
-                <select class="form-control" id="car">
-                  <option value="" disabled selected>نوع المركبة</option>
-                  <option value="car1">نقل متوسط</option>
-                  <option value="car2">سيارة دفع رباعي</option>
-                  <option value="car3">سياره خاصه</option>
-                </select>
-                <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
-              </div>
-              <div class="col-md-4">
-                <input placeholder="تاريخ الفحص" type="datetime-local" class="form-control" id="date">
-              </div>
-              
-              <div class="col-md-4 mt-2">
-                <button type="submit" class="btn btn-success">بحث</button>
-              </div>
-            </form>
-        </div>
+      <div class="form-section">
+        <h3 class="text-center mb-4">البحث عن الحجوزات للفحص الفني الدوري</h3>
+        <form id="booking-form" class="row">
+          <div class="col-md-4 position-relative">
+            <select class="form-control" id="location">
+              <option value="" disabled selected>المنطقة</option>
+              <option value="region1">الرياض</option>
+              <option value="region2">جدة</option>
+              <option value="region3">مكة</option>
+            </select>
+            <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
+          </div>
+          <div class="col-md-4 position-relative">
+            <select class="form-control" id="car">
+              <option value="" disabled selected>نوع المركبة</option>
+              <option value="car1">نقل متوسط</option>
+              <option value="car2">سيارة دفع رباعي</option>
+              <option value="car3">سياره خاصه</option>
+            </select>
+            <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
+          </div>
+          <div class="col-md-4">
+            <input placeholder="تاريخ الفحص" type="datetime-local" class="form-control" id="date">
+          </div>
+
+          <div class="col-md-4 mt-2">
+            <button type="submit" class="btn btn-success">بحث</button>
+          </div>
+        </form>
+      </div>
     </div>
-</section>
-  
+  </section>
+
+
+  <!-- ///////////////////////////////information//////////////////////////////////////// -->
+  <div class="info-component info-checktime">
+    <div class="container">
+      <h2 class="info-title">متى يجب فحص المركبة</h2>
+      <div class="info-container">
+        <div class="info-content">
+          <div class="inf-details">
+            <div class="inf-img annual"></div>
+            <h4>بشكل دوري</h4>
+            <p>يجب فحص المركبة بشكل دوري قبل انتهاء صلاحية الفحص</p>
+          </div>
+        </div>
+        <div class="info-content">
+          <div class="inf-details">
+            <div class="inf-img trading"></div>
+            <h4>عند نقل ملكية المركبة</h4>
+            <p>في حال عدم وجود فحص فني دوري ساري للمركبة</p>
+          </div>
+        </div>
+        <div class="info-content">
+          <div class="inf-details">
+            <div class="inf-img global"></div>
+            <h4>المركبات الأجنبية</h4>
+            <p>خلال 15 يوم من تاريخ دخولها إلى المملكة في حال عدم وجود فحص فني ساري من خارج المملكة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -152,7 +184,7 @@
                     <li><a
                         class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-15kjgm"
                         href="https://www.saso.gov.sa/ar/contactus/Pages/contact.aspx" target="_blank">اتصل بنا</a></li>
-                  
+
                   </ul>
                 </div>
               </div>
@@ -167,15 +199,18 @@
               <h4>ابق على اتصال معنا عبر مواقع التواصل الإجتماعي</h4>
               <ul class="footer-social">
                 <li><a href="https://twitter.com/SASOGOV" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.youtube.com/user/sasogov" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="https://www.snapchat.com/add/Sasogov" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>
-                <li><a href="https://www.instagram.com/sasogov/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/user/sasogov" target="_blank"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li><a href="https://www.snapchat.com/add/Sasogov" target="_blank"><i
+                      class="fab fa-snapchat-ghost"></i></a></li>
+                <li><a href="https://www.instagram.com/sasogov/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
                 <li><a href="https://www.facebook.com/SASOGOV" target="_blank"><i class="fab fa-facebook"></i></a></li>
               </ul>
-              
+
             </div>
           </div>
-        
+
         </div>
         <div class="footer-bottom">
           <div>
