@@ -175,9 +175,13 @@ body {
 .form-section {
     background-color: #0088af;
     color: white;
-    padding: 20px;
+    padding: 20px !important;
+    margin: 20px !important;
     border-radius: 10px;
     margin-top: 30px;
+}
+.booking-form {
+    width: 100%;
 }
 .form-control {
     height: 50px;
@@ -208,12 +212,7 @@ body {
     border-radius: 0.25rem; /* تحديد حواف السلكت */
   }
   
-  /* تعديل التنسيق لقسم الفورم */
-  .form-section {
-    padding: 2rem 0;
-  }
-  
-  /* تحسين التباعد والموضع */
+
   .hero-content {
     margin-bottom: 2rem;
   }
