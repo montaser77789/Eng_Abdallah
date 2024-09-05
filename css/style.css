@@ -135,7 +135,110 @@ body {
   }
   
 
-
+  .section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-content .----info-title {
+    color: #0088af;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero-content img {
+    max-width: 100%;
+}
+.btn-main-section-one{
+    border: 1px solid #0088af;
+    color: #0088af;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.btn-main-section{
+    background-color: #0088af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.form-section {
+    background-color: #0088af;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.form-control {
+    height: 50px;
+    margin-bottom: 20px;
+}
+.form-section button {
+    height: 50px;
+    width: 100%;
+}
+/* تخصيص أيقونات السهم */
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* ضبط المسافة من اليسار */
+    bottom: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem; /* حجم الأيقونة */
+    color: #007bff; /* لون الأيقونة */
+    pointer-events: none; /* الأيقونة غير قابلة للنقر */
+  }
+  
+  /* جعل السلكت يظهر بشكل مناسب */
+  .form-control {
+    appearance: none; /* إزالة السهم الافتراضي للسلكت */
+    padding-left: 2.5rem; /* إفساح المجال للسهم */
+    background-color: #ffffff; /* لون الخلفية للسلكت */
+    border: 1px solid #ced4da; /* تحديد اللون والحواف */
+    border-radius: 0.25rem; /* تحديد حواف السلكت */
+  }
+  
+  /* تعديل التنسيق لقسم الفورم */
+  .form-section {
+    padding: 2rem 0;
+  }
+  
+  /* تحسين التباعد والموضع */
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+  
+  .btn-outline-primary {
+    border-color: #007bff; /* تحديد لون الحدود */
+    color: #007bff; /* تحديد لون النص */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff; /* تغيير لون النص عند التمرير */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* تحديد لون الخلفية */
+    border-color: #007bff; /* تحديد لون الحدود */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* تغيير لون الخلفية عند التمرير */
+    border-color: #004494; /* تغيير لون الحدود عند التمرير */
+  }
+  
+  
 
 /* /////////////footer/////////////////////// */
 .footer {
@@ -333,4 +436,5 @@ body {
     }
     
 }
+
 
