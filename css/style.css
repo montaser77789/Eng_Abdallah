@@ -435,7 +435,7 @@ html, body {
   }
   
   .map-details {
-    width: 50%;
+    width: 48%;
     text-align: center;
   }
   
@@ -471,6 +471,9 @@ html, body {
     padding: 5px;
     border-radius: 3px;
   }
+  .map-details-1 {
+    text-align: right;
+  }
   
   .point:hover .zone-name {
     display: block;
@@ -488,7 +491,13 @@ html, body {
       font-size: 2rem !important;
     }
     .parrent-map {
-        top: 5px;
+        top: 10px;
+    }
+    .map-details-1 h2{
+        font-size: 18px;
+    }
+    .map-details-1  p , .map-details-2 p {
+        font-size: 12px;
     }
   }
   
