@@ -472,7 +472,7 @@ html, body {
     border-radius: 3px;
   }
   .map-details-1 {
-    text-align: right;
+    text-align: center;
   }
   
   .point:hover .zone-name {
@@ -490,6 +490,10 @@ html, body {
       font-weight: 500 !important;
       font-size: 2rem !important;
     }
+    .map-details-1 {
+        text-align: right;
+      }
+      
     .parrent-map {
         top: 10px;
     }
