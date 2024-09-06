@@ -4,15 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    text-align: var(--bs-body-text-align);
+ overflow-x: hidden;
 }
 
 .redirect-bar {
@@ -326,7 +318,51 @@ body {
         width: 6rem;
     }
 }
-
+/* //////////////////////services////////////////////////// */
+/* تأكد من أن العرض لا يتجاوز عرض الصفحة */
+.services {
+    background: linear-gradient(-82.01deg, #0088af -.14%, #006d8c 95.85%);
+    padding: 3rem 0;
+  }
+  
+  .services-header .info-title {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .info-content {
+    margin: auto;
+    text-align: center;
+    color: #000;
+  }
+  
+  .swiper-wrapper {
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    width: 100%; /* اجعل العرض مرن */
+    max-width: 300px; /* أو أي قيمة مناسبة */
+    background-color: white;
+    box-sizing: border-box;
+  }
+  
+  .swiper-pagination {
+    text-align: center;
+    margin-top: 1rem; /* ضبط المسافة بين السلايدر والنقاط */
+  }
+  
+  .swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.6;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #0088af;
+  }
+  
   
   
 
