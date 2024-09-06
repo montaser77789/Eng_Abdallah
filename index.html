@@ -211,29 +211,39 @@
             </div>
             
             <div class="map-select map-available">
-              <select  class="form-select custom-select" aria-label="Default select example">
-                <option selected>المنطقة</option>
-                <option value="1">الرياض</option>
-                <option value="2">مكة المكرمة</option>
-                <option value="3">الدمام</option>
-                <option value="4">المدينة المنورة</option>
-              </select>
+              <div class="map-select-content">
+                <select class="form-select custom-select small-text" aria-label="Default select example">
+                  <option value="" selected>المنطقة</option>
+                  <option value="1">الرياض</option>
+                  <option value="2">مكة المكرمة</option>
+                  <option value="3">الدمام</option>
+                  <option value="4">المدينة المنورة</option>
+                </select>
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
               
-              <select  class="form-select" aria-label="Default select example">
-                <option selected>نوع المركبه</option>
-                <option value="1">نقل متوسط</option>
-                <option value="2">سيارة دفع رباعي</option>
-                <option value="3">سياره خاصه</option>
-                <option value="3">سياره خاصه </option>
-
-              </select>
-              <select  class="form-select" aria-label="Default select example">
-                <option selected>الجهه المرخصه</option>
-                <option value="1">شركه تكامل لخدمات الاعمال </option>
-                <option value="2">الفحص الفني الدوري المركبات</option>
-
-              </select>
+            
+              <div class="map-select-content">
+                <select class="form-select custom-select small-text" aria-label="Default select example">
+                  <option selected>نوع المركبة</option>
+                  <option value="1">نقل متوسط</option>
+                  <option value="2">سيارة دفع رباعي</option>
+                  <option value="3">سيارة خاصة</option>
+                  <option value="4">سيارة خاصة</option>
+                </select>
+                <i class="fa-solid fa-car"></i>
+              </div>
+            
+              <div class="map-select-content">
+                <select class="form-select custom-select small-text" aria-label="Default select example">
+                  <option selected>الجهة المرخصة</option>
+                  <option value="1">شركة تكامل لخدمات الأعمال</option>
+                  <option value="2">الفحص الفني الدوري للمركبات</option>
+                </select>
+                <i class="fa-solid fa-building"></i>
+              </div>
             </div>
+            
             <div>
               <button class="btn-map map-available">بحث</button>
             </div>
@@ -322,7 +332,7 @@
   <div class="container benefit-section">
     <h2>فوائد الفحص الفني الدوري</h2>
     <p>الفحص الفني يحافظ على أداء جيد لأجزاء المركبة وسلامتها</p>
-    <div class="row">
+    <div class="row benefit-row ">
       <!-- Benefit 1 -->
       <div class="col-md-4">
         <div class="benefit-card text-center">
@@ -343,6 +353,9 @@
           <img src="./images/21d203012b109cfdd3c6.svg" alt="فائدة 1">
           <p>الحد من التأثيرات البيئية من خلال التأكد من أن نسبة الانبعاثات ضمن الحد المسموح به خلال عملية الفحص</p>
         </div>
+      </div>
+      <div class="benefit-image">
+        <img src="./images/photo_2024-09-06_20-05-07.jpg"/>
       </div>
     </div>
   </div>
@@ -436,14 +449,6 @@
       </div>
     </div>
   </section>
-  
-
-
-
-
-
-
-
 
   <!-- /////////////////////footer////////////////////////////// -->
   <div class="footer page-content">

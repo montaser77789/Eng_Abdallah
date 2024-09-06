@@ -529,28 +529,46 @@ width: 40%;
     text-align: center;
     width: 100%;
   }
-  /* لإخفاء السهم الافتراضي */
-.custom-select {
-    -webkit-appearance: none; /* For Safari */
-    -moz-appearance: none;    /* For Firefox */
-    appearance: none;         /* For others */
-    position: relative;
-    padding-right: 30px;      /* مساحة للنص */
-    padding-left: 40px;       /* مساحة للسهم */
-    text-align: right;        /* محاذاة النص لليمين */
-  }
-  
+
   /* إضافة السهم المخصص */
-  .custom-select::after {
-    content: '\25BC'; /* Unicode للسهم */
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 10px;       /* وضع السهم على اليسار */
-    transform: translateY(-50%);
-    pointer-events: none; /* حتى لا يتأثر بالضغط */
+ 
+  .map-select-content {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 3px;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+  .map-select-content i {
+    margin-left: 0px; /* المسافة بين الأيقونة والكلمة */
+    font-size: 13px; /* حجم الأيقونة الأصغر */
+    color: #66b8cf;
+  }
+  
+  .form-select {
+    flex-grow: 1;
+    border: none; /* إزالة الحدود الافتراضية */
+    outline: none; /* إزالة الخط المحيط عند التفاعل */
+    background-color: transparent; /* الخلفية الشفافة داخل البلوك الأبيض */
+    font-size: 14px; /* حجم النص الأصغر */
+  }
+  
+  .form-select option {
+    font-size: 14px; /* حجم النص داخل القائمة */
+  }
+  .small-text {
+    font-size: 8px !important; /* تصغير حجم النص */
+  }
+  
+  .small-text option {
+    font-size: 12px !important; /* حجم أصغر للنص داخل الخيارات */
+  }
+  
+
   @media screen and (max-width: 768px) {
     .map-details h2 {
       font-weight: 500;
@@ -700,6 +718,19 @@ width: 40%;
     margin-top: 30px !important;
 
   }
+  .benefit-row{
+    position: relative;
+  }
+  .benefit-image {
+    position: absolute;
+    top: -350px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    object-fit: cover;
+  }
   @media (max-width: 767px) {
     .benefit-card {
       margin-bottom: 20px;
@@ -707,6 +738,16 @@ width: 40%;
     .benefit-2 {
       margin-top: 0 !important;
     }
+    .benefit-image {
+        width: 80%;
+        height: auto;
+        top: -300px;
+    }
+    .benefit-image img {
+        width: 100%;
+        height: auto;
+    }
+
   }
 
   /* ////////////////////////////////////////////// */
