@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
- overflow-x: hidden;
-}
-
+html, body {
+    overflow-x: hidden;
+  }
+  
 .redirect-bar {
     background: #c1c1c1;
     padding: 1.6rem;
@@ -324,6 +324,10 @@ body {
     background: linear-gradient(-82.01deg, #0088af -.14%, #006d8c 95.85%);
     padding: 3rem 0;
   }
+  .swiper-container {
+    width: 100%;
+    overflow: hidde;
+  }
   
   .services-header .info-title {
     color: #fff;
@@ -338,9 +342,12 @@ body {
     color: #000;
   }
   
-  .swiper-wrapper {
+  .swiper-container , .swiper-wrapper {
+    width: 100% !important;
+    height: 100% !important;
     align-items: center;
   }
+  
   
   .swiper-slide {
     width: 100%; /* اجعل العرض مرن */
@@ -361,6 +368,40 @@ body {
   
   .swiper-pagination-bullet-active {
     background: #0088af;
+  }
+  
+
+  .swiper-container {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #000; 
+    opacity: 1;
+    margin: 0 5px; 
+    width: 15.07px !important;
+    height: 5.33px !important;
+    border-radius: 5px !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #0088af !important; 
+  }
+  .mySwiper2 .swiper-pagination {
+    display: none;
+  }
+  .swiper-container {
+    overflow: hidden;
   }
   
   
