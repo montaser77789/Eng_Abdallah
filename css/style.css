@@ -432,10 +432,11 @@ html, body {
   .map-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
   
   .map-details {
-    width: 48%;
     text-align: center;
   }
   
@@ -473,13 +474,83 @@ html, body {
   }
   .map-details-1 {
     text-align: center;
+    width: 40%;
   }
   
   .point:hover .zone-name {
     display: block;
   }
+  .map-search {
+    display: flex;
+    width: 70%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .map-search input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  .map-search .fa-solid {
+    color: #66b8cf;
+    font-size: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .map-details-2 {
+width: 40%;
+  }
+  .map-details-3{
+    width: 40%;
+  }
+  .map-select{
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: center;
+
+  }
+  .map-available {
+    display: none;
+    justify-content: center;
+}
+
+  .btn-map {
+    background-color: #66b8cf;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+  }
+  /* لإخفاء السهم الافتراضي */
+.custom-select {
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;    /* For Firefox */
+    appearance: none;         /* For others */
+    position: relative;
+    padding-right: 30px;      /* مساحة للنص */
+    padding-left: 40px;       /* مساحة للسهم */
+    text-align: right;        /* محاذاة النص لليمين */
+  }
   
-  /* لجعل التصميم مناسباً للشاشات الصغيرة */
+  /* إضافة السهم المخصص */
+  .custom-select::after {
+    content: '\25BC'; /* Unicode للسهم */
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 10px;       /* وضع السهم على اليسار */
+    transform: translateY(-50%);
+    pointer-events: none; /* حتى لا يتأثر بالضغط */
+  }
+  
   @media screen and (max-width: 768px) {
     .map-details h2 {
       font-weight: 500;
@@ -503,6 +574,13 @@ html, body {
     .map-details-1  p , .map-details-2 p {
         font-size: 12px;
     }
+    .map-details-3 {
+        width: 100%;
+      }
+      .map-search{
+        width: 100% !important;
+      }
+
   }
   /* //////////////////////////////////////// */
   .step-section {

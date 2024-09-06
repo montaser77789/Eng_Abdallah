@@ -197,30 +197,56 @@
           <div class="map-details map-details-1">
             <h2>مواقع الفحص الفني الدوري</h2>
             <p>ابحث عن أقرب موقع فحص لك، أو ابحث باسم المدينة أو نوع المركبة</p>
+           
           </div>
           <div class="map-details map-details-2">
             <h2 class="map-number">35</h2>
             <p>موقع للفحص الفني الدوري داخل المملكة العربية السعودية</p>
+          </div>
+          <div class="map-details map-details-3">
+            <div class="map-search">
+              <input type="text" id="search-map" placeholder="ابحث عن موقع فحص" />
+              <i class="fa-solid fa-location-crosshairs"></i>
+
+            </div>
+            
+            <div class="map-select map-available">
+              <select  class="form-select custom-select" aria-label="Default select example">
+                <option selected>المنطقة</option>
+                <option value="1">الرياض</option>
+                <option value="2">مكة المكرمة</option>
+                <option value="3">الدمام</option>
+                <option value="4">المدينة المنورة</option>
+              </select>
+              
+              <select  class="form-select" aria-label="Default select example">
+                <option selected>نوع المركبه</option>
+                <option value="1">نقل متوسط</option>
+                <option value="2">سيارة دفع رباعي</option>
+                <option value="3">سياره خاصه</option>
+                <option value="3">سياره خاصه </option>
+
+              </select>
+              <select  class="form-select" aria-label="Default select example">
+                <option selected>الجهه المرخصه</option>
+                <option value="1">شركه تكامل لخدمات الاعمال </option>
+                <option value="2">الفحص الفني الدوري المركبات</option>
+
+              </select>
+            </div>
+            <div>
+              <button class="btn-map map-available">بحث</button>
+            </div>
           </div>
         </div>
       </div>
 
 
 
-      <div class="point" style="top: 30%; left: 50%;">
-        <img src="./images/spot.svg">
-        <span class="zone-name">الرياض</span>
-      </div>
+  
 
-      <div class="point" style="top: 40%; left: 35%;">
-        <img src="./images/spot.svg">
-        <span class="zone-name">جدة</span>
-      </div>
 
-      <div class="point" style="top: 45%; left: 70%;">
-        <img src="./images/spot.svg">
-        <span class="zone-name">الدمام</span>
-      </div>
+
 
       <div class="point" style="top: 60%; left: 20%;">
         <img src="./images/spot.svg">
@@ -235,10 +261,6 @@
 
 
 
-      <div class="point" style="top: 35%; left: 15%;">
-        <img src="./images/spot.svg">
-        <span class="zone-name">نجران</span>
-      </div>
 
       <div class="point" style="top: 50%; left: 65%;">
         <img src="./images/spot.svg">
@@ -524,6 +546,19 @@
       });
     });
     // Ensure the DOM is fully loaded before running the script
+    const searchmap = document.getElementById('search-map');
+const mapavailable = document.querySelectorAll('.map-available');
+
+searchmap.addEventListener('focus', function () {
+    // إزالة الكلاس 'map-available' من جميع العناصر التي تحتوي عليه
+    mapavailable.forEach(element => {
+        element.style.display = 'flex'; // إظهار العناصر
+    });
+});
+
+
+
+
 
 
 
