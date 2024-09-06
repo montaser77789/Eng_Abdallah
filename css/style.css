@@ -253,7 +253,7 @@ html, body {
 .info-component .info-container .info-content {
     margin-bottom: 4rem;
     text-align: center;
-    width: 25rem;
+    width: 30rem;
 
 }
 .info-component .info-container .info-content .inf-img.annual {
@@ -279,6 +279,9 @@ html, body {
     height: 8rem;
     width: 8rem;
     margin: auto;
+}
+.inf-img img{
+    max-width: 100%;
 }
 .inf-details{
     margin: 10px 0;
@@ -318,6 +321,9 @@ html, body {
         height: 6rem;
         width: 6rem;
     }
+    .info-component .info-container .info-content{
+        width: 25rem;
+    }
 }
 /* //////////////////////services////////////////////////// */
 /* تأكد من أن العرض لا يتجاوز عرض الصفحة */
@@ -354,8 +360,7 @@ html, body {
   
   
   .swiper-slide {
-    width: 100%; /* اجعل العرض مرن */
-    max-width: 300px; /* أو أي قيمة مناسبة */
+    max-width: 300px !important; /* أو أي قيمة مناسبة */
     background-color: white;
     box-sizing: border-box;
   }
