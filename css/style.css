@@ -487,6 +487,9 @@ html, body {
       font-weight: 500 !important;
       font-size: 2rem !important;
     }
+    .parrent-map {
+        top: 5px;
+    }
   }
   
   
