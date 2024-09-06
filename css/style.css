@@ -578,6 +578,128 @@ html, body {
       margin-bottom: 20px;
     }
   }
+  /* ////////////////////////////////////////////////////////////// */
+  .benefit-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .benefit-section h2 {
+    font-size: 28px;
+    color: #075e73;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .benefit-section p {
+    color: #737373;
+    margin-bottom: 50px;
+ 
+  }
+  .benefit-card {
+    background-color: white;
+    border: 1px solid #d6e4e5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  .benefit-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .benefit-card p {
+    font-size: 20px;
+    font-weight: 500;
+        color: #5a5a5a;
+    text-align: center;
+  }
+  .benefit-2 {
+    margin-top: 30px !important;
+
+  }
+  @media (max-width: 767px) {
+    .benefit-card {
+      margin-bottom: 20px;
+    }
+    .benefit-2 {
+      margin-top: 0 !important;
+    }
+  }
+
+  /* ////////////////////////////////////////////// */
+  .booking-section {
+    background-color: #038ab3;
+    color: white;
+    padding: 50px 0;
+    text-align: right;
+    min-height: 400px;
+  }
+  .booking-section-parent {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .booking-section-content{
+    width: 60%;
+  }
+  .booking-section-image {
+    width: 30%;
+  }
+  .booking-section-image img {
+    height: auto;
+  }
+
+  .booking-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .booking-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+  }
+
+  .app-buttons img {
+    width: 150px;
+    margin: 0 10px;
+  }
+
+  .phone-image {
+    width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .booking-section {
+      text-align: center;
+    }
+
+    .phone-image {
+      position: static;
+      transform: none;
+      margin-top: 20px;
+      width: 180px;
+    }
+     .booking-section-content{
+        width: 100%;
+    }
+    .booking-section-image {
+      width: 100%;
+    }
+
+    .app-buttons img {
+      width: 140px;
+    }
+  }
   
 
 /* /////////////footer/////////////////////// */
