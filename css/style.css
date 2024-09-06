@@ -253,7 +253,8 @@ html, body {
 .info-component .info-container .info-content {
     margin-bottom: 4rem;
     text-align: center;
-    width: 20rem;
+    width: 25rem;
+
 }
 .info-component .info-container .info-content .inf-img.annual {
     background: url(../images/dcd1074a22e0523058bf.svg) no-repeat;
@@ -346,6 +347,9 @@ html, body {
     width: 100% !important;
     height: 100% !important;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
+
   }
   
   
