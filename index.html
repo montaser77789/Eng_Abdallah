@@ -81,29 +81,109 @@
       <div class="form-section">
         <h3 class="text-center mb-4">البحث عن الحجوزات للفحص الفني الدوري</h3>
         <form id="booking-form" class="row">
-          <div class="col-md-4 position-relative">
+
+          <div class="col-md-3 position-relative">
+            
             <select class="form-control" id="location">
               <option value="" disabled selected>المنطقة</option>
-              <option value="region1">الرياض</option>
-              <option value="region2">جدة</option>
-              <option value="region3">مكة</option>
+              <option value="region1">منطقه الرياض</option>
+              <option value="region2">منطقه مكه المكرمة</option>
+              <option value="region3">المنطقه الشرقيه</option>
+              <option value="region3">منطقه القصيم </option>
+              <option value="region3">منطقه الباحه</option>
+              <option value="region3">منطقه عسير</option>
+              <option value="region3">منطقه الحدود الشماليه </option>
+              <option value="region3">منطقه نجران</option>
+              <option value="region3">منطقه الجواف</option>
+              <option value="region3">منطقه جازان</option>
+              <option value="region3">منطقه حائل</option>
+              <option value="region3">منطقه تبوك</option>
+              <option value="region3">منطقه المدينه المنوره</option>
+
             </select>
             <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
           </div>
-          <div class="col-md-4 position-relative">
-            <select class="form-control" id="car">
-              <option value="" disabled selected>نوع المركبة</option>
-              <option value="car1">نقل متوسط</option>
-              <option value="car2">سيارة دفع رباعي</option>
-              <option value="car3">سياره خاصه</option>
-            </select>
-            <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
+
+          <div class="col-md-3 position-relative">
+    <div class="custom-select">
+        <div class="selected">
+            <span>نوع المركبة</span>
+        </div>
+        <div class="select-items">
+        
+          <div data-value="مقطوره">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAcCAYAAADV0GlvAAAABHNCSVQICAgIfAhkiAAABQlJREFU%0AWEflWT1sHEUUfnNAHFFgR3Q0OSoQYHPu6HzXhQPJdyUVdmE3IMXusClyKbiFynaBkOxIOSokKPYs%0AJZYQhc81QnESoPXRIMpLhw+xj+/N7OzP7d7unkgi/4yUnHd35s1737z35s03ioq2L9wKqRemSXGV%0AiMsYViamih6+2bimf9v7W/i+VlTks+/HO7TRXCPHha7qASmaCeZktU2bi+v2WeUq8+X+TWJtnBg/%0ApnGNPBpQCZOdqca3AUTLAEE9Uup6XD3ovdHsybtsINruGgZvmcH8EMKOMaKvfxm/irbxfQHfaqaP%0AOgRoR7TZrJ4pPEaVcdwWdL2l9c4FouXO0BV1ot2JuQnjugnj2q6gfIGBkFgnXorFVOYSZ3tEfXdu%0AgNzRO1h53BgV8/6d2UaJlavIq91b+VW7adFW332rotSLEo7r91cebY+Oq+/NdhWpBXwzOcy2Qh7h%0AuBCobhZVxg+bzND4YG+O0Y4OVh8nQqa+N9dCfN5iotsHK4/gssXbh3vvVJlKh+PG1ndnewoeCyDi%0AKSAXiLbbgKu78IYnUKcy/8r3ndeu/Lbw5/DtoweffJeM+4Khcb6AiG4xfk6Y//qj3uUDot2VfRZ1%0Agb/3wiUuHxBBXsAWudE0RdKlA2IkLwCIfmEgHBdbqlqkU75GU+JN6XXE+cgRTvcEhqPyStYKuaEh%0AtcYU6gwBz3GRTM83ENh90DYaiSozF4j43nz+gXj1pRN6b/ru2A38r9M3fvzl0x9uJDqY/XgBINYu%0AhEfkATHkqa9+Wv35swQQF6qOcLpjQyO3xpsECOL9tBIbiVROtluoPJdReXZy54x0sJUlXmWV2IvF%0AKksLBKkWnXo71GoOCitTEIgb37xZ/vvq1UFv+ThVthg06TnD6pg1tnq3MvPyP8PywervxzGbUkvs%0AAAjpGh5LC4FREIhCsp5np2wgRkCQkptKH4f6ed9Gawz93gIh/IQ0qUwZBI3yn5+ncZPNBds0wyZ6%0A92nIy4rScoTjLoHaAu0Woba0w8TprQCIyZQ4g725lgQiqDS15TuG4qIqHpaw5NN4twzP6MQ9gtdz%0AvQCcgwEWZTyB2dLiIVOIHe1FKOj+T2PI1idnkQuWTFEHcoWjFJZNKLq+1j3azPzw+igQXBJjYavX%0Awv/VRKVpK0cRyCWAIs0DVYdwUGqNPBVPSNEJDeELufGzTAxMSdaseplYDP99GCRzSyYHAxgUgnCr%0AvI+FCgkgzbQJxQgwWEFvBUD8pjyxA/8EiLYL7jFBaj6BsJDxtQMdF8aqdzOVzfwY8aZQpig3vpqL%0AyfONFBDGEsUpCT9IjuOU49cVaaGE1fDzgXVVS9FHx9qjurjeZK1swM4AgvkPiAxXK02+uLuEpTnj%0AWNc3PTWFoEM3IGQDERYIMwe6iXfgb5PUt4XATbLYdtVHD2F2FUTAZrM8EQ5h3unpcjzanO4hHqup%0AIE0yiWXcmbq4ZwnzjQZNXzOUyeN5LDrCRhhsDbow8gOza4y2aLKUXYJUV1/qyN2GYbTXAUSCKM3V%0AOQyrHmK1A9ceEHtSVQoIMR4kV1ZaB+MlMA5eIWCUSh0YLslZ9Ma27l8zxK4ofEEAKP1eQ7bP1LgN%0A2auJldV1CRQczTHiYYxV+rw5PtkWnUwnUMwxmvMEhCHmsFWzTvwWBHgE5h5/wWMURz0Bl5JLHQ8T%0APA1lNcj+VSEhRu1WXNTYvH5ml5CrCNFfSvp+kTn+A0Nm6uTmlgXNAAAAAElFTkSuQmCC"
+                  alt="صورة مقطوره"> نقل ثقيل
           </div>
-          <div class="col-md-4">
+          <div data-value="دراجه ناريه">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAABHNCSVQICAgIfAhkiAAAAyRJREFU%0AWEftV79PU1EUPqdANaaJhamTwqADMaFsJA6U1ZjQ/gXCAIkTOBaXdpAyONS4ydCSoKOvJvhja90c%0ATMAfgxvt5MCgrFLe8Tv3lde+1/aVhJeUGE/Svvae+9797nd+vO8y+S1nxelKZI1E0sSU7PIPc0Do%0AgIiLtLG4ozDYg+WJlaQIWxibJJIvuNbw+T1MvO7aopgoRcw3cS1TNr3sAR/detk4pWhiOvb+1Y2r%0An2u2LXU5PWl8ePijfik2oCA2rTI28ADkLrTBF6wlBKJ061qVbuNzWUyI8u9WvuZcPCat+RfAv+kA%0AXznEwHEqkU/Fms3kKXMc/++yHVlhjOMh8PcyGWOKzGLuUfecIJ8+q78fwOJgeKYLvMO+pnMr51us%0AaygomzEOtXul6QQ3R3+ieLffrn5b7QU9aM6g+4P897fvpIQi1XOAr1QBcIo2MloUrg1afNAGB91/%0AcfAFK4UAKPhHAF90WX8xnbRJpkZ47LWIvSfET3smDTUn+s2RAJ9JmgA/EyeZqRjI/NjWbvVEYqn5%0A8eefYiNHc33y2s2w3n4Hir/ztucG+YLvDU6bQkUmRg9pLl5qgP26KQSmOpg2v4dtEbJreyvfax4c%0AbsECPFjLo1BzwwZ67vX/gz83VSFP/PeZ9yrMOBrKATFaajYTfjFryxZeQ4zQuqmOrlGh7GK+Z8wG%0AMq/Ao+j/KotFPuKq6lIXEPxfoMcZyNOQbNOC/FY1K8cOQZAGxDN4ulGPXav4wD8Dm+ueSW3JsAxf%0A2fiMZDYyuYaxdEjQiQrQVSJMf0BULuNI8IKFF6ZGwitZjG+zsq8bZSNymOcNoE4TPYiACZ9kaEtS%0A3/yL7QQR9b7hyVWPSCFNo7ZN4uekzmdnEuUQLv+pCZP4Om2kxz24zvS0plJYZsjzvWvOwIs0POCd%0A9EU9ZMrek1QnGDdtOOcWjnPS2seudxCRpbCwI5paoPqyVFXrsFyolPC9RLbM9quv/uBNbrVSyiki%0Ap2A1lQhRCrPjnNWSNgPWc6o58mlqBJIUDN4wYGlKAbSxOopq3S2q0Kg36yjgItZCp4GxdppWo+iz%0Azl9WJsmYd1Q4FAAAAABJRU5ErkJggg=="
+                  alt="صورة دراجه ناريه">حافله خفيفه
+          </div>
+          <div data-value="مركبه اجره">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAWCAYAAAC7ZX7KAAAABHNCSVQICAgIfAhkiAAABEpJREFU%0ASEvNV01vG1UUvXfcuIFS4lIKEUJiumKB2qbqilUnCwRNF7Z/QRwJuk26I63UTIqaWeLsqnbReIPE%0AAnkiEQuJRdxfgBskVCSkmAUgoDQDQsX58FzOfTN27HgaOXGl9kkTO37v3Xfeued+DNOgw1ueI5IC%0AzNgJpuqYG6fZPD6fzeBDm3HLGUrzKrGcJiGXmGrGltAYMX9ugBIV8fgA7B76nD0bDw/Y81cB6gRt%0AkkNuPmjb9coOES4ym2NaKFdxkerzB+z59wA2TyHAXs9HzLbGCwFY3T9sTcLdGfOwzMTarPa4+oUA%0A7PnrJKLyqcPFAM3v0Ba02ymF587wrTKCJzVicHAIJk20R4x6vuDvEibqvcEkNn4rYA6BZrIH1nCv%0AJ3o37v8LU0CfZhejoPPKOITnogjHkzgAQHCwpQyHPhi/n7wM88Tnnjp/EKDMF3HpB8AVxLiKbMAK%0Af2cmNKLJPISACtoB5ZXBFi7UHrIItqHjhNGp4YOAS7Slnow9qxiEHAXsm7Wz+dyg9mNvOe20NqjB%0ALumJo3GEXOlvGFaZa2A4oEZYSgymfg9/lgwvlJXElichW6qDYUN7pJOovFbpWr4Qs4X/u7V94dUv%0AaDT9sF/4neuubjZfyh5N/QcPdI8f/r1E6433tUoqacjrMt9Tzncl0asTAHYglQK0rSW2pe06jhl7%0AM/1wemTol8apoZ++TELdaB4f/af51odvpH8steZTtNl4JfX77SfNE+9t0/EP9PemHBl+vGNnAZKD%0Arbe/+mPn3W9jwnImbZJMAUckVx37AmakJQ1ElpIzOu8ea4ZZEbLDna3SN4+9DDJFFSaKiSW3X0l4%0AZe0zClotP3ptNrCOpCch0PrKx2sllPQleDbbleu7ASdwJfIzbmhfvnOmBhJsJkHR4HNM4fjXjz5T%0AqaA8Dzpk6tKpG4ElXEZAPdBzYHG9cmXtPEDreWC6YyCVRhoWudrutqJ502XBWI1DXnoyZNnVqVpw%0A+e6ZJWW68uvNHB3ljYR9/d2g1dGhQYoJqQLkjHNvLHNsJ9yISdGAc/BEQSdajAjERYDze/SiDY0/%0AcfJGXYMOxk7rnom7Z10Wya1c+X4sDtbd6tcf1GhVh2xgE5FPxZVP1pQkmrhzFsEvM5W/bqI+ALDG%0AU7RH5xWwfuHp3vNkGfotvLwdArSsqr6wroCUslj5cx7RDDcOPGR84vU5FAOaht0iiEOV5XHj0d9c%0A9Np7qi6IjUqz9g1acneHHWkUBk9eR1lMaZXJMLNvmFjwtTL+DYPuoTFr0088Qtdy59VzAOuYOiBN%0At/Lolh0RgkxhehEz6prqnt7At5lHDxGGy7SNDcOpi/iOtwt0akhxA736mP4FOVd4nSzLpUbzPg2h%0ADlhWFkBxmeTyv/8bh8nF+vrTEa0iJdpCICS1lgel2/Qxxv5ke6tmJw20zhzcYbe/V6SIDbvdXh4U%0AWD/rTSBGbt9v+f9mgQn+9T9kwwAAAABJRU5ErkJggg=="
+                  alt="صورة مركبه اجره"> مركبه نقل خفيفه
+          </div>
+          <div data-value="مركبه دبلوماسيه">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAcCAYAAADV0GlvAAAABHNCSVQICAgIfAhkiAAABQlJREFU%0AWEflWT1sHEUUfnNAHFFgR3Q0OSoQYHPu6HzXhQPJdyUVdmE3IMXusClyKbiFynaBkOxIOSokKPYs%0AJZYQhc81QnESoPXRIMpLhw+xj+/N7OzP7d7unkgi/4yUnHd35s1737z35s03ioq2L9wKqRemSXGV%0AiMsYViamih6+2bimf9v7W/i+VlTks+/HO7TRXCPHha7qASmaCeZktU2bi+v2WeUq8+X+TWJtnBg/%0ApnGNPBpQCZOdqca3AUTLAEE9Uup6XD3ovdHsybtsINruGgZvmcH8EMKOMaKvfxm/irbxfQHfaqaP%0AOgRoR7TZrJ4pPEaVcdwWdL2l9c4FouXO0BV1ot2JuQnjugnj2q6gfIGBkFgnXorFVOYSZ3tEfXdu%0AgNzRO1h53BgV8/6d2UaJlavIq91b+VW7adFW332rotSLEo7r91cebY+Oq+/NdhWpBXwzOcy2Qh7h%0AuBCobhZVxg+bzND4YG+O0Y4OVh8nQqa+N9dCfN5iotsHK4/gssXbh3vvVJlKh+PG1ndnewoeCyDi%0AKSAXiLbbgKu78IYnUKcy/8r3ndeu/Lbw5/DtoweffJeM+4Khcb6AiG4xfk6Y//qj3uUDot2VfRZ1%0Agb/3wiUuHxBBXsAWudE0RdKlA2IkLwCIfmEgHBdbqlqkU75GU+JN6XXE+cgRTvcEhqPyStYKuaEh%0AtcYU6gwBz3GRTM83ENh90DYaiSozF4j43nz+gXj1pRN6b/ru2A38r9M3fvzl0x9uJDqY/XgBINYu%0AhEfkATHkqa9+Wv35swQQF6qOcLpjQyO3xpsECOL9tBIbiVROtluoPJdReXZy54x0sJUlXmWV2IvF%0AKksLBKkWnXo71GoOCitTEIgb37xZ/vvq1UFv+ThVthg06TnD6pg1tnq3MvPyP8PywervxzGbUkvs%0AAAjpGh5LC4FREIhCsp5np2wgRkCQkptKH4f6ed9Gawz93gIh/IQ0qUwZBI3yn5+ncZPNBds0wyZ6%0A92nIy4rScoTjLoHaAu0Woba0w8TprQCIyZQ4g725lgQiqDS15TuG4qIqHpaw5NN4twzP6MQ9gtdz%0AvQCcgwEWZTyB2dLiIVOIHe1FKOj+T2PI1idnkQuWTFEHcoWjFJZNKLq+1j3azPzw+igQXBJjYavX%0Awv/VRKVpK0cRyCWAIs0DVYdwUGqNPBVPSNEJDeELufGzTAxMSdaseplYDP99GCRzSyYHAxgUgnCr%0AvI+FCgkgzbQJxQgwWEFvBUD8pjyxA/8EiLYL7jFBaj6BsJDxtQMdF8aqdzOVzfwY8aZQpig3vpqL%0AyfONFBDGEsUpCT9IjuOU49cVaaGE1fDzgXVVS9FHx9qjurjeZK1swM4AgvkPiAxXK02+uLuEpTnj%0AWNc3PTWFoEM3IGQDERYIMwe6iXfgb5PUt4XATbLYdtVHD2F2FUTAZrM8EQ5h3unpcjzanO4hHqup%0AIE0yiWXcmbq4ZwnzjQZNXzOUyeN5LDrCRhhsDbow8gOza4y2aLKUXYJUV1/qyN2GYbTXAUSCKM3V%0AOQyrHmK1A9ceEHtSVQoIMR4kV1ZaB+MlMA5eIWCUSh0YLslZ9Ma27l8zxK4ofEEAKP1eQ7bP1LgN%0A2auJldV1CRQczTHiYYxV+rw5PtkWnUwnUMwxmvMEhCHmsFWzTvwWBHgE5h5/wWMURz0Bl5JLHQ8T%0APA1lNcj+VSEhRu1WXNTYvH5ml5CrCNFfSvp+kTn+A0Nm6uTmlgXNAAAAAElFTkSuQmCC"
+                  alt="صورة مركبه دبلوماسيه">نقل متوسط
+          </div>
+          <div data-value="مركبه خاصه">
+              <img src="data:image/png;base64,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"
+                  alt="صورة مركبه خاصه"> حافله كبيره
+          </div>
+          <div data-value="مركبه خاصه">
+              <img src="data:image/png;base64,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"
+                  alt="صورة مركبه خاصه">الدرجات ثنائيه العجلات
+          </div>
+          <div data-value="مركبه خاصه">
+              <img src="data:image/png;base64,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"
+                  alt="صورة مركبه خاصه">مركبه اشغال عامه
+          </div>
+          <div data-value="مركبه خاصه">
+              <img src="data:image/png;base64,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%0AAElFTkSuQmCC"
+                  alt="صورة مركبه خاصه">درجات ثنائيه
+          </div>
+          <div data-value="مركبه خاصه">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAjCAYAAAA0aUL2AAAABHNCSVQICAgIfAhkiAAAA6FJREFU%0AWEftWUFPE1EQnimIiRfwFwhXI1B/AeUomtD+AksiJJ6kN4sH2oPdI+UKJiy/YBsTqjfqL7BCYrxR%0Abt7AgyZi6fjN23ZpaVm27Uow2Xfszs6bb+ab7+2bMvkty0mT8AYxTfja3ZaHQlU6k3n2jadQOiEW%0AJjW+7csknmeJJO8PyioJiXyitVTitmMiy0GMvB+Baq/UwtZ0mpgfBK1eo362+/Hlt5qf/ZN300kw%0AHfQJtrp8DlspgKow81yw7Y1VZm/5oOhnP7TPsEAxNeb9AhWKxfF8Q4jy5eWDXBBQA/sMCxSy7ys0%0Az7YfJQBsvx9QA/uMQPWQ9Bb/B85qDx4O7TOqlE+l0Cu+zY+DexIqme6npwb2GValgkp6gyX14cVh%0AyVf9tqdLTLw4sM9hQenGqmxBAqjX67XrDt6Wn6F8hgEqCKAbtYlARV/pN0q4zs0i+kX0i+jXfwZy%0AzgSN8ZH/IOh/m1EoqLtkYxDUPd26kcFL4f3Fzfjs/AvlUqe+pXnrxIlHxo0Nnx9TNlXrq5T/VP1c%0A5zsIaNILSugUM40iZRfzXYFaDuyM/eXPLpt+S+bKZJj3Ys8v/Inulw5/mlRwkgjeMRuJ7IL7mm2l%0ACjZjrYJN2eSSF4gGJvzZ9IiqLFPFfRf2OthpDid7ArOcHHyud1czzJ7ymhjDzway/iZ1MQB1ewEB%0Am2HjPKjlBm+VMKfTCskSfrM7Aiw4NoChEpLHMwDosQwrmksI9MU0OdRhpo6oDY3cIHSMxkxKj+re%0A8mGGtGdiqIpWcC2VxvBxEvZHrWHpwtbDOPPIhoCqv+6MLFWOUYQxnQyjwmvJ+z1Btf/Y0VOFkpZf%0Apz4hLbcST7dncN9zl3efshyIhaFh2/KS4I3dAGyzvHKwCuC4gwW/YxmnIhnGi0VwNwxQk+6A0wW1%0AsDVzikoZACL1x+WVr1XQDUDlh+mVNgk2le28JLpzwoJTgc85U80gi+E3m1r1n6UHcdSyaYlEk15K%0AJ6JRUFKq5ZVDGwE2RUQ2dWMyfcYneL0G8ZhK7MQn7v1p5JCI2s/RmF35vg7xUBERlfe+kh4eKAVn%0AOdoDs8juKr1e3PRyonwXqKKpjkx5Z5CyhPgV7Drl21VFtQeYHiJyTbLDBWXEwKjcePPvn1rzkybh%0AxnEpwA5VRMVatDRKZmTeFZU+V7igdHMj7VREUElPFNwzKOdJ+eUg9cxpnU1uEx437e0+8Rjz8EG1%0AR6EAr/s8Gsb+CsR/AcLZx1h7qdywAAAAAElFTkSuQmCC"
+                  alt="صورة مركبه خاصه">مقطوره ثقيه
+          </div>
+          <div data-value="مركبه خاصه">
+              <img src="data:image/png;base64,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"
+                  alt="صورة مركبه خاصه">سياره الاجره
+          </div>
+          <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAABHNCSVQICAgIfAhkiAAAAyRJREFU%0AWEftV79PU1EUPqdANaaJhamTwqADMaFsJA6U1ZjQ/gXCAIkTOBaXdpAyONS4ydCSoKOvJvhja90c%0ATMAfgxvt5MCgrFLe8Tv3lde+1/aVhJeUGE/Svvae+9797nd+vO8y+S1nxelKZI1E0sSU7PIPc0Do%0AgIiLtLG4ozDYg+WJlaQIWxibJJIvuNbw+T1MvO7aopgoRcw3cS1TNr3sAR/detk4pWhiOvb+1Y2r%0An2u2LXU5PWl8ePijfik2oCA2rTI28ADkLrTBF6wlBKJ061qVbuNzWUyI8u9WvuZcPCat+RfAv+kA%0AXznEwHEqkU/Fms3kKXMc/++yHVlhjOMh8PcyGWOKzGLuUfecIJ8+q78fwOJgeKYLvMO+pnMr51us%0AaygomzEOtXul6QQ3R3+ieLffrn5b7QU9aM6g+4P897fvpIQi1XOAr1QBcIo2MloUrg1afNAGB91/%0AcfAFK4UAKPhHAF90WX8xnbRJpkZ47LWIvSfET3smDTUn+s2RAJ9JmgA/EyeZqRjI/NjWbvVEYqn5%0A8eefYiNHc33y2s2w3n4Hir/ztucG+YLvDU6bQkUmRg9pLl5qgP26KQSmOpg2v4dtEbJreyvfax4c%0AbsECPFjLo1BzwwZ67vX/gz83VSFP/PeZ9yrMOBrKATFaajYTfjFryxZeQ4zQuqmOrlGh7GK+Z8wG%0AMq/Ao+j/KotFPuKq6lIXEPxfoMcZyNOQbNOC/FY1K8cOQZAGxDN4ulGPXav4wD8Dm+ueSW3JsAxf%0A2fiMZDYyuYaxdEjQiQrQVSJMf0BULuNI8IKFF6ZGwitZjG+zsq8bZSNymOcNoE4TPYiACZ9kaEtS%0A3/yL7QQR9b7hyVWPSCFNo7ZN4uekzmdnEuUQLv+pCZP4Om2kxz24zvS0plJYZsjzvWvOwIs0POCd%0A9EU9ZMrek1QnGDdtOOcWjnPS2seudxCRpbCwI5paoPqyVFXrsFyolPC9RLbM9quv/uBNbrVSyiki%0Ap2A1lQhRCrPjnNWSNgPWc6o58mlqBJIUDN4wYGlKAbSxOopq3S2q0Kg36yjgItZCp4GxdppWo+iz%0Azl9WJsmYd1Q4FAAAAABJRU5ErkJggg=="
+                  alt="صورة مركبه خاصه">
+              حافله متوسطه
+          </div>
+          <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA4lJREFU%0AWEftWM9rE0EUfhODgiDEowcxRfAgxqZ/QePRVmj2XLBbkF5Nj40H04PJRTReG6EJePC2m0s9Go9F%0AocGCNzHeRIR2QaH0xz6/N5vEbWk32TbtFszAkrDzduab9773vZlRFNQKVoIuxp4SsUmKEoG2p9fZ%0AwvyLtGBUVeAcJauMfhNPFc/m6eEJHDlNpKYA+F4PsPY3GNWxqlxEQL1pS5Y4qtwLLLdDUIgUbNFq%0AgIaNIdiBR2Ho2YG7tD3g0LMhPXv/dSobY7WMz44sOFvula1PzvSOs3ftRaRqMFm5K/r9stcaV52H%0Af37t3HweKdheILv9UXG2n9D7F7Hnxn+sOqazsXf97Zl7tt/Q+wF/dKa//ty59ebMwfYder9hVDT4%0AD8GWrCT2je9l34gtITa8sjWzz+muq2RlfGAb5xOsPrpcGKUYp4m5TErlyFVNDVa5ArpKHKsei2sD%0A+8gFLq4rKtobEZ6vQiyHFxU9s9IUO6o2g8PMNSwmYs+SnAXtoc6GiG1/picqCsX6DCQui5mSoMgm%0AktKmLbdGBSPccV3kkmOPMRaUSBKamuTyK3pieAneaccGW7KhxZQBlz/owZnSADuOd619Gt3LZyXL%0AJFbYHrIDU08qZVylbuDdrFxqnAysvvRQ4gkpHJ0JSCepIht9G5TPjvXC6dnrAlSnbcrti0jRqqJP%0AIvdvjtCeFT2+BDDM85Q3JDvpQeVO5nc83mzMNjdxEYFQavUw0A/gAU0AiRe3ERVQZ2LpNm5diFbm%0AvnjhL1otHbUFQ6gmlVQuW2p9qIGESOHhJD4zwakx4dRkJYUJ1QwztVbmPo+0B0V57tgHocXdmdAo%0Ab5gCVKn4mli7io13j9ZtLLyAsXHHpgqwywJ4WuYNBivu7zR9MadGAXpE9g4TlRR0T00BrAOw3hlK%0ACozHwVagZ2VyqYy4lvKDZebZlbn1ahesLEiaooLQLhisf8YODdrkzyynE5d33Rzxrq3Dp4uLWuub%0ABpKUC1kdkYmllCm/Gqg0ncRYdIcGbRz9g9WDWDYyeBx1eqy7M5P3en+hE+YqQpsM9Ko3TsbjtypT%0Afmp+n72oBOHEewj3w4HV3gUnWeRFVVGmW5CuBAbOYQGKXCTNQY08CnmXl36Oa70VWawJnw9+Gg5s%0Ax4uXIDdEyFRwmPk7/sstn/Cq1dOrfgPxMOM7T6cRGM1RePtwNQkPNhSawRr/Ba9N+4nErLaAAAAA%0AAElFTkSuQmCC"
+                  alt="صورة مركبه خاصه">مقطوره خفيفه
+          </div>
+          <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAABHNCSVQICAgIfAhkiAAAAuNJREFU%0AWEftV81rE0EUf7MJqaLYBARFCiagKH7U5CJKEVNPtfWQvenJFJqCCNKcJAo2uTTHVlEKptD6F2xQ%0AG711vUhPWhMrFRRz8mTBiGk1bjO+t7vZ7OaDdivUWDOwMPPmzez7zfvNe/MYJNMc/tnGE2wbAeAF%0A4LDQ8s5g4AZgpzQ7zR7g/AXcEoMtDyApoY1s7v8B0J/qzjOAztlI1lPrnf6Hx/yMOV+jPIrzE3a8%0A1zd51Otwuj4hDR7NRnLh2rUDqe4RlI1zrgQyw++q1LbrAdxIjVJoIOKwtkupE0EOwhwqJDKRbNwO%0AAGMtUjcznKujLh5cHH84yqDc+zTyVjb2bgMwHXPbA0S/NoUqT4kmeaB9iZuEpi2LQhenTobIhmdD%0AuXStLcFpv3uXUg6vKaX082tLeTthlHQp1mOcly1xXt9EzxOhuvzSPIzSO0ig5NHaTeB+4FxPmtvr%0ANdraB9/YOtUDUt0TwLfj5eV9He+P0KIPxXNPviiHXlH/zJ7pUcD8vrLmhux3MbFhyBzCwNjBDes3%0AVeR3ceqraVque9/QZODBFfmAa/E89fOrp6OLN6ZUzlVC6nLJC/PXHzdc2/DfY5KMANT9/qhRvVLi%0AvRAXDRCbAkAeKChd+pt8fZOWihcOr5T3dqmalG8YyNjDgME6q6vxdDkWK4xdNcneYD+NcpMH+SDE%0AxJmKzqYArG+yVWO+MAjLv3ya8Cf3qCc4JoXQWEkTovExUYuASQmjoVFx+VCeR1nQXMSgLP73AJR5%0AAG6LCwhgBAGM64bIEAshNSQ3dDCqL7y6t0SsEtNWXZ5oCODs/YE7DkGJ0kKXUNy90/HNSX3zHTh+%0Ab2hTeeLjas/+H2XPTcMvxGUG/hpP5jUKUc1raTKO0AN6qxyAPjQo1DPZN+N2fjbxT9MwA6jZ2N7Q%0AQg17S6vaJqptOQCVHnhxKxeSLjPABI7zIABxOoh9ii4ylFDPRRcXP7oPmm4a6VRXtv4Gx55AxP09%0A93AAAAAASUVORK5CYII="
+                  alt="صورة مركبه خاصه">نصف مقطوره خفيفه
+          </div>
+          <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAABHNCSVQICAgIfAhkiAAAAjxJREFU%0AWEdjZGjf8J9hyIL/jYzDyAP/PzL8Z7gw6CODkUGAgYFRH+JO5Bj4//8gQ1Wgw6D3QPt6oBsZ9496%0AYMBiajQGBizooRaPxsBoDFAYAqNJiMIApFj7MI4BUDuIqYDiEKK1AUz/DRj+/5+A2ZSgtcU0MX94%0ANKfXN6AHjiLHsQhx9pvqIPE7X203v/mjcg7EtuCbX8/AyMDw7a8Aw6UvgY1EB+p/hgQGRkZ5otXj%0AVPh/IlDqA5L0AaBzMIHh1MgDUmxX7UEyD76bFV7NmwNOc96z9cC9t7e/FBhOZG/Cqher3W3rDwA9%0AADaPIgDqr/z678jQEAj3BFkeAMXAxz8y0DY5YSfd+Oqk+u2fiAxYJajfwchwAMgCFhiM/AjdwND9%0AD+ysMDLGI4ldBLI3AMWRYvB/IkNl4AKYGrI8QNjJqCpOfExkePtbESL4878gOATb1gcAHbseIgh0%0AfGUgpARsXw8sDeE9LkWg+AOgmANyJwYo1jBwHvj335ChOvAC0AMFQA/0Qx1ygKEyAJg01gswsDOe%0AB4opQGMrENhL3ICq9n8jVg9YTvGuY2b6UwjSyMb0lYeT+RMLiI2cB7QnpZBVT9z9bi3x459gOTxe%0AQGmZkcEALSYfQJIQqM+LAg4AecAYgAJYAEC58CRkPd1jgQDLM6T0B1GB7AE0g0njoiQN0rQiVCMl%0ANbp7AJw8gBkXliFBmZmBYQKQ/4CBiQGUph2AbFDpcoDhF1AdGyjjAjEoP0DUbgAmJ2gNjPASAK20%0AWbXw9EEvAAAAAElFTkSuQmCC"
+                  alt="صورة مركبه خاصه">نصف مقطوره خفيفه خاصه
+          </div>
+          <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAgCAYAAACPb1E+AAAABHNCSVQICAgIfAhkiAAABN5JREFU%0AWEfNWL1uG0cQnjkbUpEi8hPk0qWIFOoJRHWJHETkE5guKCCVzl2kFKKLkKWoKoAUQPQT3NmIiXTm%0AG1iWjCCdmC5d5CKFCOsm38weyaP4c0eIdrIASelud/bbmW+/nVkmbbVwhZb5kIRKxLRiz/I2kSe0%0AX25SIzwj4q+mDOviufuwF9EP3z3Pa177sXVuhE18F/EJ5hlsfffKncSGj1/9TG5CBbwoYMYSCQsx%0AN+k6PqJa+SprTgeyHuoqA3gkyhqwkPf1sOQcAs8r2L3tp7PsJp6MhEg2B15ZCJIcRhQsUwtgQ7oG%0AbaZ4dRyk8nPJOyAWDc/sJnLU937xtLDyyfubAwvphIb4dsD5q/im9/y37//QyLnWCH18R0aBHhw1%0AAeg4yHqovAzcCrMaH9BeyWw8PFkLEA4dOz5OpIiw+ixyhV9sLukwydNfq287NoNtXMLf/Br2Ht+e%0AdRxkI6xhxUV4qJgFkRqgSQJy62QN46TY3rkYG5d+9/XPX/jevaWAmXZFKGjvnB+lPAqFIHC0XEvP%0APRkkwUN525wg+2a/PfmyGIsXAWztZfVc1UVDX0TYQ1BtHUC7/b4f3ZPptX/zy2rJAyimeHMQ+nqo%0AFOgikpX/BUgFoVQAPzdeVi82B94kfoXd/qC/if5TTyoo5ei9+0uXIu/X2zu/KyedboMGCHlL/10w%0ASHo0SRXgqaII+1MVQ6iCd8/a1XO3YdwJ6AOkin4C0iGvmJjfaXerBInzxjxN5QmyhJA7HroNdEj7%0ApfUhyLTBWSBVQ5m3YeCM9refpCXIdFJoN5++jq7APE30rl29MM8ZSOVlohwu3D+FBfqx7DwwC2Qj%0A1GSghc+Z8SWlk8mJ0wRQfx4nWl+mK5Kb2oCTdgrx5SjIevQ3tKl8l3DPDSxrQMoBC9s4WXPO/f6j%0Agqy/2BgA7N28yZM/OtoNj9wP40lLGLxdnOWaqCDTl3fg2KcJ2NastGywoA8K0lI97EwWbFoIcjqR%0A1g3q4ZnwBhawOdisk7gwAtLVN9g4HFAMaeG4AuPICb3sUoJj5Ige5CLdYgixvLGz10DxLt76mkvi%0A+TMDbQqC555XoVifT2hqOzkamerRa4QkO8HNy3yRP6kHe8uoZYhPAewIAPWw0AJPS4bQcsZGiFIF%0Amjur6cJ68jkbQRdVOuiC1VuMTFt17rZdl9x2DWwMrfWQ5KYSiTG8CTYHsh/qvN6a1k9DFCMX9LQi%0AdInz1vFaM0lwz5Dgro8cFno4MEoVpdm0kGOhAAl+uDD0d9/doOpR5hIELXeDh8er4Dm9gv3gn/ve%0Ag85fB0otzb4LyHY6cNBQom7PLMbhipOgdJsnwRgbi6ioJ1lreH6kCcLW8WoFfyvoFjwZjGQ4Oam2%0AYJB6iwE+XsNTfe4lOaGtR3c7mzyVk/VpXz9L4BcNEvKFFAs7EiA1rFqqXgIYflEi6+0FqkQrtBoR%0AKACpAiWy+DUE6TTtEANU01ZgEF4BJ9KeyLKm71VahD+zGnrZZAfhNsDq5Y5LYqJTE3OVqtzXLM54%0ADd+az7mVububUq7SNg3eyUzLThW9QqFYF9q12nrJ20aoMQ+OyRjg++lhxuKHnrQrDwjtSIMQ5wjH%0AxDkaoXpQVWN406ZCr5cOytkcHuzbHeWku/LQDxwAtc+50kwWpJPqzM7jHf4Fig3valzfgbcAAAAA%0ASUVORK5CYII="
+                  alt="صورة مركبه خاصه"> مقطوره خفيفه خاصه
+          </div>
+
+      </div>
+    </div>
+    <i class="fas fa-chevron-down select-arrow"></i> <!-- أيقونة السهم -->
+</div>
+
+
+          <div class="col-md-3">
             <input placeholder="تاريخ الفحص" type="datetime-local" class="form-control" id="date">
           </div>
 
-          <div class="col-md-4 mt-2">
+          <div class="col-md-3 mt-2">
             <button type="submit" class="btn btn-success">بحث</button>
           </div>
         </form>
@@ -197,7 +277,7 @@
           <div class="map-details map-details-1">
             <h2>مواقع الفحص الفني الدوري</h2>
             <p>ابحث عن أقرب موقع فحص لك، أو ابحث باسم المدينة أو نوع المركبة</p>
-           
+
           </div>
           <div class="map-details map-details-2">
             <h2 class="map-number">35</h2>
@@ -209,31 +289,52 @@
               <i class="fa-solid fa-location-crosshairs"></i>
 
             </div>
-            
+
             <div class="map-select map-available">
               <div class="map-select-content">
                 <select class="form-select custom-select small-text" aria-label="Default select example">
-                  <option value="" selected>المنطقة</option>
-                  <option value="1">الرياض</option>
-                  <option value="2">مكة المكرمة</option>
-                  <option value="3">الدمام</option>
-                  <option value="4">المدينة المنورة</option>
+                  <option value="" disabled selected>المنطقة</option>
+                  <option value="region1">منطقه الرياض</option>
+                  <option value="region2">منطقه مكه المكرمة</option>
+                  <option value="region3">المنطقه الشرقيه</option>
+                  <option value="region3">منطقه القصيم </option>
+                  <option value="region3">منطقه الباحه</option>
+                  <option value="region3">منطقه عسير</option>
+                  <option value="region3">منطقه الحدود الشماليه </option>
+                  <option value="region3">منطقه نجران</option>
+                  <option value="region3">منطقه الجواف</option>
+                  <option value="region3">منطقه جازان</option>
+                  <option value="region3">منطقه حائل</option>
+                  <option value="region3">منطقه تبوك</option>
+                  <option value="region3">منطقه المدينه المنوره</option>
                 </select>
                 <i class="fa-solid fa-location-dot"></i>
               </div>
-              
-            
               <div class="map-select-content">
                 <select class="form-select custom-select small-text" aria-label="Default select example">
-                  <option selected>نوع المركبة</option>
-                  <option value="1">نقل متوسط</option>
-                  <option value="2">سيارة دفع رباعي</option>
-                  <option value="3">سيارة خاصة</option>
-                  <option value="4">سيارة خاصة</option>
+                  <option value="" disabled selected>نوع المركبة</option>
+                  <option value="car3">سياره خاصه</option>
+                  <option value="car1">مركبه نقل خفيف خاص</option>
+                  <option value="car2">نقل ثقيل</option>
+                  <option value="car2">حافله خفيفه</option>
+                  <option value="car2">مركبه نقل خفيفه</option>
+                  <option value="car2">نقل متوسط </option>
+                  <option value="car2">حافله كبيره</option>
+                  <option value="car2">الدرجات ثنائيه العجلات</option>
+                  <option value="car2">مركبات اشغال عامه</option>
+                  <option value="car2">دراجه ثنائيه او ثلاثيه العجلات</option>
+                  <option value="car2">مقطوره ثقيله</option>
+                  <option value="car2">سياره الاجره</option>
+                  <option value="car2">نصف مقطوره ثقيله</option>
+                  <option value="car2">حافله متوسطه</option>
+                  <option value="car2">مقطوره خفيفه</option>
+                  <option value="car2">نصف مقطوره خفيفه</option>
+                  <option value="car2">نصف مقطوره خفيفه خاصه </option>
+                  <option value="car2">مقطوره خفيفه خاصه</option>
                 </select>
                 <i class="fa-solid fa-car"></i>
               </div>
-            
+
               <div class="map-select-content">
                 <select class="form-select custom-select small-text" aria-label="Default select example">
                   <option selected>الجهة المرخصة</option>
@@ -243,20 +344,13 @@
                 <i class="fa-solid fa-building"></i>
               </div>
             </div>
-            
             <div>
               <button class="btn-map map-available">بحث</button>
             </div>
+
           </div>
         </div>
       </div>
-
-
-
-  
-
-
-
 
       <div class="point" style="top: 60%; left: 20%;">
         <img src="./images/spot.svg">
@@ -267,10 +361,6 @@
         <img src="./images/spot.svg">
         <span class="zone-name">مكة المكرمة</span>
       </div>
-
-
-
-
 
       <div class="point" style="top: 50%; left: 65%;">
         <img src="./images/spot.svg">
@@ -355,7 +445,7 @@
         </div>
       </div>
       <div class="benefit-image">
-        <img src="./images/photo_2024-09-06_20-05-07.jpg"/>
+        <img src="./images/photo_2024-09-06_20-05-07.jpg" />
       </div>
     </div>
   </div>
@@ -397,50 +487,59 @@
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button text-right" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button class="accordion-button text-right" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               ما هي خدمه مواعيد الفحص الفني الاداري ؟
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              خدمة تهدف إلى توحيد تجربة المستخدمين الراغبين في زيارة مواقع الفحص الفني الدوري من خلال جدولة الموعد مسبقاً والحصول على خدمة الفحص دون الانتظار لساعات طويلة.
+              خدمة تهدف إلى توحيد تجربة المستخدمين الراغبين في زيارة مواقع الفحص الفني الدوري من خلال جدولة الموعد
+              مسبقاً والحصول على خدمة الفحص دون الانتظار لساعات طويلة.
             </div>
           </div>
         </div>
-  
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               هل يلزم حجز موعد لاجراء الفحص الفني الدوري؟
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
             <div class="accordion-body">
               نعم، يلزم حجز موعد عند الرغبة في إجراء فحص فني دوري جديد أو عند إعادة الفحص أيضاً.
             </div>
           </div>
         </div>
-  
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               نجحت مركبتي بالفحص، ولكنني لم أجد معلومات الفحص بنظام أبشر.
             </button>
           </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
             <div class="accordion-body">
               يجب مطابقة بيانات المركبة المسجلة بين رخصة السير ورقم الهيكل المسجل على المركبة.
             </div>
           </div>
         </div>
-  
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               ما هي الجهات المرخصة من المواصفات السعودية لاجراء الفحص الفني الدوري للمركبات؟
             </button>
           </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
             <div class="accordion-body">
               شركة الفحص الفني الدوري للسيارات والمركبات (MVPI).
             </div>
@@ -542,41 +641,71 @@
 
       navLinks.forEach(link => {
         link.addEventListener('click', function () {
-          // إزالة الـ active class من جميع الروابط
           navLinks.forEach(l => l.classList.remove('active'));
 
-          // إضافة الـ active class للعنصر الذي تم النقر عليه
           this.classList.add('active');
         });
       });
     });
-    // Ensure the DOM is fully loaded before running the script
     const searchmap = document.getElementById('search-map');
-const mapavailable = document.querySelectorAll('.map-available');
+    const mapavailable = document.querySelectorAll('.map-available');
 
-searchmap.addEventListener('focus', function () {
-    // إزالة الكلاس 'map-available' من جميع العناصر التي تحتوي عليه
-    mapavailable.forEach(element => {
-        element.style.display = 'flex'; // إظهار العناصر
+    searchmap.addEventListener('focus', function () {
+      mapavailable.forEach(element => {
+        element.style.display = 'flex'; 
+      });
     });
+    // Function to initialize custom selects with images
+function initializeCustomSelects() {
+    const selects = document.querySelectorAll('.custom-select');
+
+    selects.forEach(select => {
+        const selected = select.querySelector('.selected');
+        const selectItems = select.querySelector('.select-items');
+
+        // Toggle the visibility of the select options
+        selected.addEventListener('click', () => {
+            const isVisible = selectItems.style.display === 'block';
+            document.querySelectorAll('.select-items').forEach(item => {
+                if (item !== selectItems) item.style.display = 'none';
+            });
+            selectItems.style.display = isVisible ? 'none' : 'block';
+        });
+
+        // Change the selected value and hide the dropdown
+        select.querySelectorAll('.select-items div').forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('img').src;
+                const text = this.textContent.trim(); // Trim to remove any extra spaces
+                selected.innerHTML = `<img src="${imgSrc}" alt="علم" style="width: 20px; height: 20px;"> ${text} <span class="arrow">▼</span>`;
+                selectItems.style.display = 'none';
+            });
+        });
+    });
+}
+
+// Initialize custom selects on page load
+initializeCustomSelects();
+
+// Hide the dropdown if the user clicks outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.custom-select')) {
+        document.querySelectorAll('.select-items').forEach(item => {
+            item.style.display = 'none';
+        });
+    }
 });
-
-
-
-
-
-
 
   </script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1, // عرض كارد واحد في الموبايل
+      slidesPerView: 1,
       spaceBetween: 10,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
-      freeMode: true, // يسمح بتمرير سلس بدون القفز
+      freeMode: true, 
       breakpoints: {
         640: {
           slidesPerView: 2,
