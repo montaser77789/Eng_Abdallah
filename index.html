@@ -677,7 +677,7 @@ function initializeCustomSelects() {
             item.addEventListener('click', function() {
                 const imgSrc = this.querySelector('img').src;
                 const text = this.textContent.trim(); // Trim to remove any extra spaces
-                selected.innerHTML = `<img src="${imgSrc}" alt="علم" style="width: 20px; height: 20px;"> ${text} <span class="arrow">▼</span>`;
+                selected.innerHTML = `<img src="${imgSrc}" alt="علم" style="width: 20px; height: 20px;"> ${text}`;
                 selectItems.style.display = 'none';
             });
         });

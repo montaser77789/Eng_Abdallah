@@ -1224,6 +1224,7 @@ body {
     position: relative;
     display: inline-block;
     width: 100%;
+
 }
 
 .selected {
@@ -1268,4 +1269,11 @@ body {
     position: absolute;
     right: 10px;
     color: #000; /* Arrow color */
+}
+@media screen and (max-width: 768px) {
+    .custom-select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
 }
